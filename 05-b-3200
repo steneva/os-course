@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -p "Directory: " directoryPath;
+
+findByType() {
+    find $directoryPath -mindepth 1 -maxdepth 1 -type $1;
+}
+
+directories=$( findByType f | wc -l );
+files=$( findByType d | wc -l );
+
+echo "directories: ${directories}";
+echo "files: ${files}";
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read filePath;
+read string;
+
+cat $filePath | grep -s "$string" -m 1
+
+echo $?
+

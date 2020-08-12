@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read username;
+
+who | awk " /$username/ {print $1}" | wc -l

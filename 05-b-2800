@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$#" -ne "1" ]; then
+    echo "Invalid number of arguments" >&2
+    exit 2;
+fi
+
+grept=$( echo $1 | egrep "[[:alnum:]]*" -o);
+
+if [ "$1" = "$grept" ]; then
+	echo "true";
+    else
+	echo "false"
+fi;
+
